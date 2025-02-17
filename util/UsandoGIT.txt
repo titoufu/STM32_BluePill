@@ -1,0 +1,101 @@
+No VS Code, você pode controlar as versões dos seus projetos no GitHub usando o Git integrado. Aqui está um passo a passo:
+
+### 📌 **1. Configurar o Git no VS Code**
+1. **Instale o Git**  
+   - Baixe e instale o Git: [git-scm.com](https://git-scm.com/)
+   - Verifique se está instalado:  
+     ```sh
+     git --version
+     ```
+2. **Configure seu usuário Git (se ainda não fez)**  
+   - Defina seu nome e e-mail:
+     ```sh
+     git config --global user.name "Seu Nome"
+     git config --global user.email "seuemail@example.com"
+     ```
+
+---
+
+### 🔗 **2. Criar um Repositório no GitHub**
+1. Vá para [GitHub](https://github.com/) e crie um novo repositório.
+2. Copie a URL do repositório (SSH ou HTTPS).
+
+---
+
+### 🔥 **3. Inicializar o Controle de Versão no VS Code**
+1. **Abra seu projeto no VS Code**.
+2. **Abra o terminal no VS Code** (``Ctrl + ` ``).
+3. **Inicie o Git no projeto**:
+   ```sh
+   git init
+   ```
+4. **Vincule ao repositório remoto**:
+   ```sh
+   git remote add origin URL_DO_SEU_REPO
+   ```
+   - Se estiver usando SSH, a URL será algo como:  
+     ```
+     git@github.com:seu-usuario/seu-repo.git
+     ```
+   - Se for HTTPS:  
+     ```
+     https://github.com/seu-usuario/seu-repo.git
+     ```
+
+---
+
+### ✅ **4. Fazer um Commit e Enviar para o GitHub**
+1. **Adicionar arquivos ao controle de versão**:
+   ```sh
+   git add .
+   ```
+2. **Criar um commit com uma mensagem**:
+   ```sh
+   git commit -m "Primeiro commit"
+   ```
+3. **Enviar para o GitHub**:
+   ```sh
+   git push -u origin main
+   ```
+   ⚠️ Se der erro porque o repositório remoto está vazio, use:
+   ```sh
+   git push -u origin main --force
+   ```
+
+---
+
+### 🛠 **5. Gerenciar Versões Diretamente pelo VS Code**
+O VS Code tem uma aba de **Controle de Código-Fonte**:
+1. Clique no ícone **Fonte Control** no lado esquerdo (`Ctrl + Shift + G`).
+2. Ele mostrará os arquivos modificados.
+3. Digite uma mensagem no campo "Mensagem do Commit".
+4. Clique no **✔️ (commit)**.
+5. Clique em "Sincronizar alterações" para fazer o push.
+
+---
+
+### 🔄 **6. Atualizar seu Projeto com Alterações do GitHub**
+Se houver mudanças no repositório remoto:
+```sh
+git pull origin main
+```
+
+---
+
+### 📝 **7. Criar e Trabalhar com Branches**
+- Criar uma nova branch:  
+  ```sh
+  git checkout -b nova-branch
+  ```
+- Alternar entre branches:  
+  ```sh
+  git checkout main
+  ```
+- Enviar a branch para o GitHub:  
+  ```sh
+  git push -u origin nova-branch
+  ```
+
+---
+
+Agora você pode controlar as versões dos seus projetos no GitHub diretamente pelo VS Code! 🚀 Quer ajuda com algo específico?
